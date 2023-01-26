@@ -35,7 +35,8 @@ class Api {
     });
   }
 
-  addNewCard({name, link}) {
+  addNewCard(name, link) {
+    console.log(name, link)
     return fetch(`${this._url}/cards`, {
       method: "POST",
       headers: this._headers,
@@ -98,7 +99,7 @@ class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: userAvatar.avatarinput
+        avatar: userAvatar
 
       }),
     })
